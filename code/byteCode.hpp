@@ -2,6 +2,8 @@
 // Created by 徐东阳 on 2019-09-01.
 //
 
+// doc @ http://unpyc.sourceforge.net/Opcodes.html
+
 #ifndef XPYVM_BYTECODE_H
 #define XPYVM_BYTECODE_H
 

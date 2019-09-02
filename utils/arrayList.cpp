@@ -68,9 +68,7 @@ int ArrayList<T>::length() {
 
 template<typename T>
 T ArrayList<T>::pop() {
-    if (_size - 1 < 0) {
-        puts("error: array index < 0");
-    }
+    assert(_size - 1 > 0);
     shrink();
     return _array[--_size];
 }
