@@ -14,12 +14,11 @@ private:
     int _length;
 public:
     XString(const char *value);
-
     XString(const char *value, int length);
-
     const char *value() { return _value; }
-
     int length() { return _length; }
+
+    virtual void print();
 };
 
 

@@ -7,6 +7,8 @@
 
 
 class XObject {
+public:
+    virtual void print();
 
 };
 

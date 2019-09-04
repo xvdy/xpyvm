@@ -16,8 +16,9 @@ public:
     XInteger(int value) {
         _value = value;
     }
-
     int value() { return _value; }
+
+    virtual void print();
 };
 
 

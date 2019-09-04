@@ -5,10 +5,16 @@
 #ifndef XPYVM_INTERPRETER_HPP
 #define XPYVM_INTERPRETER_HPP
 
+#include "../code/codeObject.hpp"
 
 class Interpreter {
+private:
+    ArrayList<XObject *> *stack;
+    ArrayList<XObject *> *consts;
 public:
-    void run(CodeObject* code);
+    Interpreter();
+
+    void run(CodeObject *code);
 };
 
 
