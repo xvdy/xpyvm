@@ -1,7 +1,7 @@
 #include <iostream>
-#include "utils/bufferedInputStream.hpp"
-#include "utils/arrayList.hpp"
-#include "utils/arrayList.cpp"
+#include "utils/BufferedInputStream.hpp"
+#include "utils/ArrayList.hpp"
+#include "utils/ArrayList.cpp"
 #include "runtime/Interpreter.hpp"
 #include "code/BinaryFileParser.hpp"
 

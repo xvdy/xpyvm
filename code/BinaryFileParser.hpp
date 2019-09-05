@@ -6,12 +6,12 @@
 #define XPYVM_BINARYFILEPARSER_H
 
 
-#include "utils/bufferedInputStream.hpp"
-#include "utils/arrayList.hpp"
+#include "utils/BufferedInputStream.hpp"
+#include "utils/ArrayList.hpp"
 #include "object/XObject.hpp"
 #include "object/XInteger.hpp"
 #include "object/XString.hpp"
-#include "code/codeObject.hpp"
+#include "code/CodeObject.hpp"
 
 class BinaryFileParser {
 private:

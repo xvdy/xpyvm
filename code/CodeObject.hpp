@@ -7,7 +7,7 @@
 
 #include "object/XObject.hpp"
 #include "object/XString.hpp"
-#include "utils/arrayList.hpp"
+#include "utils/ArrayList.hpp"
 
 class CodeObject : public XObject {
 

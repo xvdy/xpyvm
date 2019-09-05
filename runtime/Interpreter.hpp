@@ -5,8 +5,8 @@
 #ifndef XPYVM_INTERPRETER_HPP
 #define XPYVM_INTERPRETER_HPP
 
-#include "code/codeObject.hpp"
-#include "utils/arrayList.hpp"
+#include "code/CodeObject.hpp"
+#include "utils/ArrayList.hpp"
 #include "object/XObject.hpp"
 #include "object/XInteger.hpp"
 #include "object/XString.hpp"
