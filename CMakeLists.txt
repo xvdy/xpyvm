@@ -1,6 +1,14 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 2.8)
 project(xpyvm)
 
-set(CMAKE_CXX_STANDARD 14)
+SET(CMAKE_CXX_FLAGS_DEBUG "-O0 -Wall -g -ggdb ")
+SET(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall")
 
-add_executable(xpyvm main.cpp code/BinaryFileParser.cpp code/BinaryFileParser.hpp code/byteCode.hpp utils/bufferedInputStream.hpp utils/arrayList.cpp utils/arrayList.hpp object/XObject.cpp object/XObject.hpp object/XString.cpp object/XString.hpp code/codeObject.cpp code/codeObject.hpp object/XInteger.cpp object/XInteger.hpp runtime/Interpreter.cpp runtime/Interpreter.cpp runtime/Interpreter.hpp)
+add_executable(xpyvm main.cpp
+        utils/bufferedInputStream.hpp utils/arrayList.cpp utils/arrayList.hpp
+        object/XInteger.cpp object/XInteger.hpp object/XObject.hpp object/XObject.cpp object/XString.cpp object/XString.hpp
+        code/byteCode.hpp code/codeObject.cpp code/codeObject.hpp code/BinaryFileParser.cpp code/BinaryFileParser.hpp
+        runtime/Interpreter.cpp runtime/Interpreter.hpp
+        )
+
+INCLUDE_DIRECTORIES(./)

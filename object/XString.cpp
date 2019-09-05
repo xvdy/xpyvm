@@ -3,7 +3,7 @@
 //
 
 #include <string>
-#include "XString.hpp"
+#include "object/XString.hpp"
 
 XString::XString(const char *value) {
     _length = strlen(value);
@@ -21,4 +21,4 @@ XString::XString(const char *value, int length) {
     }
 }
 
-void XString::print() { printf("%d", _value); }
+void XString::print() { printf("%s", _value); }

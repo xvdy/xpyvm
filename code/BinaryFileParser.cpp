@@ -3,8 +3,8 @@
 //
 
 #include <assert.h>
-#include "BinaryFileParser.hpp"
-#include "../object/XInteger.hpp"
+#include "stdio.h"
+#include "code/BinaryFileParser.hpp"
 
 BinaryFileParser::BinaryFileParser(BufferedInputStream *buffer) {
     _buffer = buffer;

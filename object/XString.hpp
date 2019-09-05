@@ -6,7 +6,7 @@
 #define XPYVM_XSTRING_HPP
 
 
-#include "XObject.hpp"
+#include "object/XObject.hpp"
 
 class XString : public XObject {
 private:

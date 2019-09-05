@@ -2,8 +2,8 @@
 #include "utils/bufferedInputStream.hpp"
 #include "utils/arrayList.hpp"
 #include "utils/arrayList.cpp"
-#include "runtime/interpreter.hpp"
-#include "code/binaryFileParser.hpp"
+#include "runtime/Interpreter.hpp"
+#include "code/BinaryFileParser.hpp"
 
 int main(int argc, char **argv) {
     if (argc <= 1) {

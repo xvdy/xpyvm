@@ -5,8 +5,9 @@
 #ifndef XPYVM_COCDOBJECT_HPP
 #define XPYVM_COCDOBJECT_HPP
 
-#include "../object/XString.hpp"
-#include "../utils/arrayList.hpp"
+#include "object/XObject.hpp"
+#include "object/XString.hpp"
+#include "utils/arrayList.hpp"
 
 class CodeObject : public XObject {
 

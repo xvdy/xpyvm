@@ -3,9 +3,9 @@
 //
 
 #include "stdio.h"
-#include "Interpreter.hpp"
-#include "../code/codeObject.hpp"
-#include "../code/byteCode.hpp"
+#include "runtime/Interpreter.hpp"
+#include "code/codeObject.hpp"
+#include "code/byteCode.hpp"
 
 void Interpreter::run(CodeObject *codes) {
     int pc = 0;

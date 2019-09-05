@@ -3,6 +3,6 @@
 //
 
 #include "stdio.h"
-#include "XInteger.hpp"
+#include "object/XInteger.hpp"
 
 void XInteger::print() { printf("%d", _value); }

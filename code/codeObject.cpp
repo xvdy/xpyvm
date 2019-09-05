@@ -2,7 +2,7 @@
 // Created by 徐东阳 on 2019-09-01.
 //
 
-#include "codeObject.hpp"
+#include "code/codeObject.hpp"
 
 CodeObject::CodeObject(int argCount, int nLocals, int stackSize, int flag, XString *byteCodes,
                        ArrayList<XObject *> *consts,
