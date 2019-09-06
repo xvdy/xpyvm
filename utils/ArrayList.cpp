@@ -4,6 +4,7 @@
 
 #include "utils/ArrayList.hpp"
 #include "stdio.h"
+#include "assert.h"
 
 template<typename T>
 ArrayList<T>::ArrayList(int n) {
@@ -72,3 +73,13 @@ T ArrayList<T>::pop() {
     shrink();
     return _array[--_size];
 }
+
+
+class XObject;
+template class ArrayList<XObject*>;
+
+class XString;
+template class ArrayList<XString*>;
+
+class XInteger;
+template class ArrayList<XInteger*>;

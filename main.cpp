@@ -11,7 +11,6 @@ int main(int argc, char **argv) {
         return 0;
     }
     BufferedInputStream stream = BufferedInputStream(argv[1]);
-    printf("magic number is: 0x%x\n", stream.read_int());
 
     BinaryFileParser parser(&stream);
     CodeObject *codeObject = parser.parse();
