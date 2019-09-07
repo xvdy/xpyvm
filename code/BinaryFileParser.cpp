@@ -154,7 +154,6 @@ ArrayList<XObject *> *BinaryFileParser::getTuple() {
     ArrayList<XObject *> *list = new ArrayList<XObject *>(length);
     for (int i = 0; i < length; i++) {
         char obj_type = _buffer->read();
-        printf("obj type: %c|\n", obj_type);
 
         switch (obj_type) {
             case 'c':

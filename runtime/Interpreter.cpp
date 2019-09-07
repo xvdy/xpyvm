@@ -13,6 +13,8 @@
 #include "object/XInteger.hpp"
 #include "object/XString.hpp"
 
+//#define DEBUG 1
+
 Interpreter::Interpreter() {}
 
 void Interpreter::run(CodeObject *codes) {
@@ -21,21 +23,24 @@ void Interpreter::run(CodeObject *codes) {
 
     stack = new ArrayList<XObject *>(codes->stackSize);
     consts = codes->consts;
+
+#ifdef DEBUG
     printf("[debug] pc %d codeLength: %d stackSize: %d \n", pc, codeLength, codes->stackSize);
 
     puts("[debug] consts is:");
-    for (int i=0;i<consts->size();i++){
+    for (int i = 0; i < consts->size(); i++) {
         consts->get(i)->print();
         printf("\n");
     };
 
     puts("[debug] stacks is:");
-    for (int i=0;i<stack->size();i++){
+    for (int i = 0; i < stack->size(); i++) {
         stack->get(i)->print();
         printf("\n");
     };
 
     puts("[debug] run..");
+#endif
 
     while (pc < codeLength) {
         char opCode = codes->byteCodes->value()[pc++];
@@ -49,7 +54,9 @@ void Interpreter::run(CodeObject *codes) {
 
         XObject *v;
 
+#ifdef DEBUG
         printf("[debug] pc is : %d opCode %d opArg %d\n", pc, opCode, opArg);
+#endif
         switch (opCode) {
             case ByteCode::LOAD_CONST:
                 stack->add(consts->get(opArg));
