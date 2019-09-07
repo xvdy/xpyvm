@@ -21,12 +21,24 @@ void Interpreter::run(CodeObject *codes) {
 
     stack = new ArrayList<XObject *>(codes->stackSize);
     consts = codes->consts;
-    printf("pc %d codeLength: %d \n", pc, codeLength);
-    puts("run..");
+    printf("[debug] pc %d codeLength: %d stackSize: %d \n", pc, codeLength, codes->stackSize);
+
+    puts("[debug] consts is:");
+    for (int i=0;i<consts->size();i++){
+        consts->get(i)->print();
+        printf("\n");
+    };
+
+    puts("[debug] stacks is:");
+    for (int i=0;i<stack->size();i++){
+        stack->get(i)->print();
+        printf("\n");
+    };
+
+    puts("[debug] run..");
 
     while (pc < codeLength) {
-        printf("pc is : %d", pc);
-        unsigned char opCode = codes->byteCodes->value()[pc++];
+        char opCode = codes->byteCodes->value()[pc++];
         bool hasArg = (opCode & 0xFF) >= ByteCode::HAVE_ARGUMENT;
 
         int opArg = -1;
@@ -37,8 +49,7 @@ void Interpreter::run(CodeObject *codes) {
 
         XObject *v;
 
-        printf("opCode %d", opCode);
-
+        printf("[debug] pc is : %d opCode %d opArg %d\n", pc, opCode, opArg);
         switch (opCode) {
             case ByteCode::LOAD_CONST:
                 stack->add(consts->get(opArg));
@@ -54,7 +65,7 @@ void Interpreter::run(CodeObject *codes) {
                 stack->pop();
                 break;
             default:
-                printf("error: unknow byte code %d\n", opCode);
+                printf("error: unknown byte code %d\n", opCode);
         }
     }
 }

@@ -14,8 +14,8 @@ XString::XString(const char *value) {
 }
 
 XString::XString(const char *value, int length) {
-    _length = strlen(value);
-    _value = new char[_length];
+    _length = length;
+    _value = new char[length];
 
     for (int i = 0; i < _length; ++i) {
         _value[i] = value[i];

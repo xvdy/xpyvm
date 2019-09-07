@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdio.h>
 #include "utils/BufferedInputStream.hpp"
 #include "utils/ArrayList.hpp"
 #include "utils/ArrayList.cpp"
@@ -17,6 +17,8 @@ int main(int argc, char **argv) {
 
     Interpreter interpreter;
     interpreter.run(codeObject);
+
+    fflush(stdout);
 
     return 0;
 }

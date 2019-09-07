@@ -69,7 +69,7 @@ int ArrayList<T>::length() {
 
 template<typename T>
 T ArrayList<T>::pop() {
-    assert(_size - 1 > 0);
+    assert(_size - 1 >= 0);
     shrink();
     return _array[--_size];
 }
